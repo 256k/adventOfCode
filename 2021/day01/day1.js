@@ -1,6 +1,4 @@
 const fs = require('fs');
-
-
 const compare = (array) => {
 	let count = 0;
 	let prevNum = 0;
@@ -10,12 +8,7 @@ const compare = (array) => {
 	})
 console.log(count);
 };
-
-
-const fileContentRaw = fs.readFileSync('./input.txt', 'utf-8');
-const fileContent = fileContentRaw.split("\n");
-
-
+const fileContent = fs.readFileSync('./input.txt', 'utf-8').split("\n");
 const windowValues = [];
 fileContent.forEach((number, index) => { 
 	windowValues.push( parseInt(number )+ parseInt(fileContent[index + 1]) +parseInt( fileContent[index+2]) - 1 );
