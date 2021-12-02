@@ -2,7 +2,7 @@ const fs = require('fs');
 const compare = (array) => {
 	let count = 0;
 	let prevNum = 0;
-	array.forEach((num,index) => {
+	array.forEach(num => {
 		num > prevNum ? count+= 1: null;
 		prevNum = num; 
 	})
